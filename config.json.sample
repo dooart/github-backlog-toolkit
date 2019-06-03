@@ -1,0 +1,22 @@
+{
+  "tasks": {
+    "issues-without-project": {
+      "repos": ["your_org/repo1", "your_org/repo2"]
+    },
+    "last-production-deploy": { "repos": ["your_org/repo1"] },
+    "labeled-issues-in-projects": {
+      "projects": [
+        {
+          "projectUrl": "your_org/1",
+          "columns": ["To do", "Current cycle", "In progress"],
+          "labels": [
+            "needs more info",
+            "waiting",
+            "blocked"
+          ],
+          "message": "There are $number blocked issues ($labels) in the backlog project board."
+        }
+      ]
+    }
+  },
+}
