@@ -1,5 +1,5 @@
 require('@babel/register')({
-  presets: ['@babel/preset-env']
+  extends: './.babelrc'
 })
 
 module.exports = require('./task-runner.js')

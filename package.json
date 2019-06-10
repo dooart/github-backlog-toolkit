@@ -1,14 +1,15 @@
 {
   "name": "github-backlog-toolkit",
   "version": "1.0.1",
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/dooart/github-backlog-toolkit.git"
   },
   "scripts": {
-    "start": "node index-console.js"
+    "prepublish": "babel -d lib src",
+    "start": "node src/index-console.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.5",
@@ -16,9 +17,11 @@
     "moment": "^2.24.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
+    "@babel/preset-es2017": "^7.0.0-beta.53",
     "@babel/register": "^7.4.4",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
