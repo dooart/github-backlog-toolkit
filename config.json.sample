@@ -19,4 +19,13 @@
       ]
     }
   },
+  "labeled-prs": {
+    "repos": [
+      {
+        "repoUrl": "your_org/repo1",
+        "labels": ["abandoned"],
+        "message": "There are $number blocked PRs ($labels) in $repo\n  $repoUrl"
+      }
+    ]
+  }
 }
