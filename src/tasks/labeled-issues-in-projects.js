@@ -42,10 +42,12 @@ const findIssues = async (octokit, cards, projectUrl) => {
   const { data } = await octokit.search.issuesAndPullRequests({
     q: `project:${projectUrl} type:issue is:open`
   })
-  const issueIds = cards.map(card => {
-    const split = card.content_url.split('/')
-    return parseInt(split[split.length - 1])
-  })
+  const issueIds = cards
+    .filter(card => !!card.content_url)
+    .map(card => {
+      const split = card.content_url.split('/')
+      return parseInt(split[split.length - 1])
+    })
   return data.items.filter(issue => issueIds.includes(issue.number))
 }
 
