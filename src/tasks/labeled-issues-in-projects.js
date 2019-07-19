@@ -80,7 +80,7 @@ export default async (octokit, config) => {
             projectConfig.projectUrl
           } ($labels)`
         message = message.replace('$number', [...new Set(labeledIssues)].length)
-        message = message.replace('$labels', labels.join(', '))
+        message = message.replace('$labels', [...new Set(labels)].join(', '))
         messages.push(message)
       }
     } catch (e) {
