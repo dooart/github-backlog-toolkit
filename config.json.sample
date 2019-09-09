@@ -27,5 +27,8 @@
         "message": "There are $number blocked PRs ($labels) in $repo\n  $repoUrl"
       }
     ]
+  },
+  "unreleased-releases": {
+    "repos": ["your_org/repo1"]
   }
 }
