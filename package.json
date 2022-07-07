@@ -15,7 +15,7 @@
   "dependencies": {
     "@babel/runtime": "^7.4.5",
     "@octokit/rest": "^16.27.0",
-    "moment": "^2.24.0"
+    "moment": "^2.29.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
